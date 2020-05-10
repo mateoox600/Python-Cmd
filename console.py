@@ -8,8 +8,12 @@ class Console():
     def run(self):
         print('Python Cmd by Mateoox600 \n')
         while True:
-            os.system(f'PCMD > {os.getcwd()}')
-            console_input = input(f'{os.getcwd()}> ').split(' ')
+            os.system('PCMD > H:/PythonConsole/pcmd.bat')
+            try:
+                console_input = input(f'{os.getcwd()}> ').split(' ')
+            except:
+                print('\n \n')
+                break
             try:
                 process_result = self.process(console_input[0], list(*[console_input[1:]]))
 
